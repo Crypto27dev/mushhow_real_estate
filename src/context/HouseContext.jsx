@@ -2,7 +2,7 @@ import { Heading } from '@chakra-ui/react';
 import { createContext, useState, useEffect } from 'react';
 import { housesData } from '../data/Data';
 
-export const HouseContext = createContext();
+export const HouseContext = createContext("");
 
 const HouseProvider = ({children}) =>{
 

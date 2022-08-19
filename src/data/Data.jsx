@@ -42,6 +42,7 @@ import Apartment6Lg from './apartments/a6lg.png';
 
 export const housesData = [
   {
+    id: 1,
     type: 'House',
     name: 'House 1',
     description:

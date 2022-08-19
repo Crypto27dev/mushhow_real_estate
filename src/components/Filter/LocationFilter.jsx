@@ -18,7 +18,7 @@ const LocationFilter = () => {
       <Select variant="flushed" placeholder='select country'>
         {
           countries.map((country, index)=> {
-            return <option onClick={locationHandler}>{country}</option>
+            return <option key={index} onClick={locationHandler}>{country}</option>
           })
         }
       </Select>

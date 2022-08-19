@@ -18,7 +18,7 @@ const PropertyTypeFilter = () => {
       <Select variant="flushed" placeholder='select type'>
         {
           properties.map((type, index)=> {
-            return <option onClick={propertyHandler}>{type}</option>
+            return <option key={index} onClick={propertyHandler}>{type}</option>
           })
         }
       </Select>

@@ -1,4 +1,4 @@
-import { Text, Button, Box, Center, Divider, Flex, Hide, HStack, Menu, MenuButton, Heading, IconButton } from "@chakra-ui/react";
+import { Button, Center, Divider, Flex, Hide } from "@chakra-ui/react";
 import { useContext} from "react";
 import { HouseContext } from "../../context/HouseContext";
 
@@ -16,44 +16,43 @@ const FilterList = () => {
     p="6"
     gap={{base: '5', lg: '4', sm: '2'}}
     shadow="md"
-    direction={{ base: "column", md: 'column', sm:"column", md: "row" }}
+    direction={{ base: "column", md: 'row', sm:"column" }}
     >
+        <LocationFilter />
 
-    <LocationFilter />
+        <Hide below="md">
+            <Center height="40px">
+                <Divider orientation="vertical" />
+            </Center>
+        </Hide>
 
-    <Hide below="md">
-        <Center height="40px">
-            <Divider orientation="vertical" />
-        </Center>
-    </Hide>
+        <PriceFilter />
 
-    <PriceFilter />
+        <Hide below="md">
+            <Center height="40px">
+                <Divider orientation="vertical" />
+            </Center>
+        </Hide>
 
-    <Hide below="md">
-        <Center height="40px">
-            <Divider orientation="vertical" />
-        </Center>
-    </Hide>
+        <PropertyTypeFilter />
 
-    <PropertyTypeFilter />
+        <Hide below="md">
+            <Center height="40px">
+                <Divider orientation="vertical" />
+            </Center>
+        </Hide>
 
-    <Hide below="md">
-        <Center height="40px">
-            <Divider orientation="vertical" />
-        </Center>
-    </Hide>
-
-    <Button
-        bg="purple.600"
-        color="white"
-        size={{base: 'lg', md: 'lg'}}
-        my={2}
-        px={10}
-        _hover={{ background: "#9F7AEA" }}
-        onClick={searchHandler}
-    >
-        Search
-    </Button>
+        <Button
+            bg="purple.600"
+            color="white"
+            size={{base: 'lg', md: 'lg'}}
+            my={2}
+            px={10}
+            _hover={{ background: "#9F7AEA" }}
+            onClick={searchHandler}
+        >
+            Search
+        </Button>
     </Flex>
   );
 };
